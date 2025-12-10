@@ -1,0 +1,69 @@
+.section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #FBF7FF; /* lilás extremamente claro */
+}
+
+.title {
+  font-size: 2.6rem;
+  color: #3C1A63; /* roxo crepuscular */
+  font-weight: 600;
+  margin-bottom: 60px;
+  font-family: inherit; /* usa Segoe/UI padrão */
+}
+
+.items {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+.item {
+  padding: 0 20px;
+}
+
+.number {
+  display: block;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #EACB76; /* dourado da paleta */
+  font-family: inherit; /* mantém a fonte padrão */
+  margin-bottom: 10px;
+}
+
+.itemTitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #3C1A63;
+  font-family: inherit;
+}
+
+.text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #2A2A2A;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 60px 16px;
+  }
+
+  .title {
+    font-size: 2.1rem;
+    margin-bottom: 40px;
+  }
+
+  .number {
+    font-size: 2.4rem;
+  }
+
+  .itemTitle {
+    font-size: 1.3rem;
+  }
+}

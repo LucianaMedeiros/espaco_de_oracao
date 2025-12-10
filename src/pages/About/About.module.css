@@ -1,0 +1,58 @@
+/* topo escuro com título */
+.hero {
+  background-color: #5E2B97;
+  color: #ffffff;
+  text-align: center;
+  padding: 80px 20px;
+  margin-top: 64px; /* para não ficar atrás do header */
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.breadcrumb {
+  color: #d9d9d9;
+  font-size: 1rem;
+}
+
+.breadcrumb a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.breadcrumb a:hover {
+  opacity: 0.7;
+}
+
+/* bloco quem somos */
+.aboutContent {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.sectionLabel {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: #A884F3; /* violeta claro */
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 2.6rem;
+  font-weight: 300;
+  margin-bottom: 28px;
+  color: #3C1A63; /* roxo crepuscular */
+}
+
+.text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 24px;
+}

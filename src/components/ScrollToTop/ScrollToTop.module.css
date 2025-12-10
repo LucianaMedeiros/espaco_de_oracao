@@ -1,0 +1,58 @@
+.scrollButton {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #5E2B97; /* violeta espiritual */
+  border: 2px solid #EACB76; /* dourado */
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 12px rgba(60, 26, 99, 0.4);
+  opacity: 0;
+  pointer-events: none;
+
+  transform: translateY(20px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 1100;
+
+  /* animação pulsar */
+  animation: pulse 2.5s infinite ease-in-out;
+  animation-play-state: paused; /* só ativa quando visível */
+}
+
+.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  animation-play-state: running;
+}
+
+/* animação de pulsar violeta */
+@keyframes pulse {
+  0% {
+    transform: scale(1) translateY(0);
+    box-shadow: 0 4px 12px rgba(94, 43, 151, 0.4);
+  }
+  50% {
+    transform: scale(1.12) translateY(0);
+    box-shadow: 0 8px 18px rgba(94, 43, 151, 0.55);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    box-shadow: 0 4px 12px rgba(94, 43, 151, 0.4);
+  }
+}
+
+/* hover */
+.scrollButton:hover {
+  background-color: #A884F3; /* violeta claro */
+  transform: translateY(-4px);
+}

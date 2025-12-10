@@ -1,0 +1,79 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  background: rgba(94, 43, 151, 0.85); /* violeta espiritual translúcido */
+  backdrop-filter: blur(6px);
+  color: #ffffff;
+  z-index: 1000;
+}
+
+/* ================================
+   LOGO + TEXTO
+================================ */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoImg {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.logoText {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* ================================
+   NAV LINKS
+================================ */
+.navLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.navLinks a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.navLinks a:hover {
+  color: #EACB76; /* dourado suave */
+  transform: translateY(-2px);
+}
+
+/* ================================
+   MOBILE
+================================ */
+@media (max-width: 640px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 16px;
+    gap: 6px;
+  }
+
+  .brand {
+    margin-bottom: 4px;
+  }
+
+  .navLinks {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+}

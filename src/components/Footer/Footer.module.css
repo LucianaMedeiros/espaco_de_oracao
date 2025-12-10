@@ -1,0 +1,90 @@
+.footer {
+  background-color: #3C1A63;
+  color: #FFFFFF;
+  padding: 32px 16px;
+  width: 100%;
+}
+
+/* layout principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-left: 40px;
+}
+
+
+/* LOGO GRANDE À ESQUERDA */
+.leftArea {
+  flex-shrink: 0;
+  /* impede de encolher */
+}
+
+.logoImg {
+  width: 120px;
+  /* AQUI você controla o tamanho real */
+  height: auto;
+  object-fit: contain;
+}
+
+/* CONTEÚDO CENTRALIZADO */
+.centerContent {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centralizado */
+  text-align: center; /* centralizado */
+
+  position: relative;
+  left: -40px; /* Move um pouco para a esquerda sem perder centralização */
+  
+  gap: 12px;
+}
+
+
+.footerLogo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #EACB76;
+}
+
+.footerInfo p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+}
+
+.footerSocial {
+  display: flex;
+  gap: 20px;
+}
+
+.footerSocial a {
+  color: #EACB76;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footerSocial a:hover {
+  color: #A884F3;
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .logoImg {
+    width: 90px;
+  }
+
+  .centerContent {
+    align-items: center;
+    text-align: center;
+  }
+}

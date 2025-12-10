@@ -1,0 +1,119 @@
+#more-content {
+  scroll-margin-top: 180px !important;
+}
+
+.sectionConteudos {
+  background-color: #F7EFFF;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.tilesRow {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+ /* CARD BASE */
+.tileCard {
+  position: relative;
+  height: 220px;
+  border-radius: 18px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 6px 18px rgba(60, 26, 99, 0.3);
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border 0.35s ease;
+  
+  /* borda padrão invisível (necessário para não “pular” no hover) */
+  border: 2px solid transparent;
+}
+
+/* ZOOM SUAVE NO HOVER */
+.tileCard:hover {
+  transform: scale(1.05); /* zoom leve */
+  box-shadow: 0 10px 26px rgba(60, 26, 99, 0.45);
+  border-color: #EACB76; /* borda dourada */
+}
+
+.tileCard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(94, 43, 151, 0); /* invisível antes */
+  transition: background 0.35s ease;
+  z-index: 0;
+}
+
+/* hover: escurece com violeta */
+.tileCard:hover::after {
+  background: rgba(94, 43, 151, 0.55); /* tom da paleta */
+}
+
+/* TEXTO SEMPRE ACIMA DO OVERLAY */
+.tileLayer {
+  position: absolute;
+  inset: 0;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #FFFFFF;
+  z-index: 1;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* camada da frente: visível inicialmente */
+.tileLayerFront {
+  background: linear-gradient(
+    to top,
+    rgba(60, 26, 99, 0.80),
+    rgba(60, 26, 99, 0.40),
+    transparent
+  );
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* camada de hover: invisível inicialmente */
+.tileLayerBack {
+  background: linear-gradient(
+    to top,
+    rgba(94, 43, 151, 0.90),
+    rgba(94, 43, 151, 0.45),
+    transparent
+  );
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* texto dentro dos cards */
+.tileLayer h3 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.tileLayer p {
+  font-size: 0.95rem;
+}
+
+/* efeito ao passar o mouse: troca as camadas */
+.tileCard:hover .tileLayerFront {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.tileCard:hover .tileLayerBack {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+  .tileCard {
+    height: 200px;
+  }
+}

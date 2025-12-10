@@ -1,0 +1,61 @@
+#daily-prayer {
+  scroll-margin-top: 80px;
+}
+
+.oracaoDiaSection {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 100px 20px;
+}
+
+.oracaoDiaOverlay {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(233, 216, 253, 0.75); /* lilás névoa translúcido */
+  backdrop-filter: blur(3px);
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(60, 26, 99, 0.15);
+  border: 2px solid #EACB76; /* dourado suave */
+}
+
+.oracaoDiaOverlay h2 {
+  color: #3C1A63; /* roxo crepuscular */
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.oracaoDiaTexto p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #2A2A2A;
+  font-weight: 500;
+}
+
+.oracaoDiaAutor {
+  display: block;
+  margin-top: 18px;
+  font-size: 1rem;
+  color: #5E2B97; /* violeta espiritual */
+  font-weight: 600;
+}
+
+/* responsivo */
+@media (max-width: 640px) {
+  .oracaoDiaSection {
+    padding: 70px 16px;
+  }
+
+  .oracaoDiaOverlay {
+    padding: 28px 18px;
+  }
+
+  .oracaoDiaTexto p {
+    font-size: 1.05rem;
+  }
+}
