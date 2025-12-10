@@ -1,73 +1,192 @@
-# React + TypeScript + Vite
+🌿 Espaço de Oração
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um ambiente digital criado para proporcionar paz, reflexão e espiritualidade, oferecendo um espaço simples, intuitivo e acolhedor para oração, intenções e mensagens inspiradoras.
 
-Currently, two official plugins are available:
+O projeto foi desenvolvido em React + Vite, com interface totalmente responsiva, animações suaves e paleta personalizada baseada no violeta espiritual.
+O site também funciona como PWA (Progressive Web App), podendo ser instalado no celular ou desktop.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✨ Funcionalidades principais
+🕊️ Seção: Quero Orar
 
-## React Compiler
+Orienta o visitante a reservar um momento de silêncio e introspecção. Inclui:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Mensagem motivacional
 
-## Expanding the ESLint configuration
+Trecho de reflexão
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+UI minimalista e focada no conteúdo
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+📿 Oração do Dia
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Uma oração exibida com destaque, com cartão elegante e bordas arredondadas.
+O componente é isolado e reutilizável.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+💬 Intenções de Oração (EmailJS)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Formulário para envio de intenções, totalmente funcional sem backend, utilizando EmailJS.
+Inclui:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Feedback visual de sucesso/erro
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Validação de campos
+
+Mensagem de confirmação estilizada com a paleta violeta e dourado suave
+
+🕯️ Mais Conteúdos (Cards Interativos)
+
+Três cards com imagens, cada um contendo:
+
+Front (texto principal)
+
+Back (texto secundário exibido no hover)
+
+Efeitos: zoom suave, borda dourada e overlay roxo translúcido
+
+As seções são acessíveis pelo menu fixo no topo.
+
+🙏 Sobre Nós
+
+Página institucional contendo:
+
+Texto inspirador sobre o propósito do espaço
+
+Seção “O que acreditamos” com três pilares apresentados em estilo editorial
+
+Layout totalmente responsivo
+
+🖼️ Galeria (Em Construção)
+
+Página com contador regressivo até o lançamento oficial.
+Inclui:
+
+Contador animado
+
+Layout limpo
+
+PWA splash adaptado
+
+Mensagem “Estamos chegando em breve”.
+
+🎨 Identidade Visual
+
+Paleta violeta espiritual utilizada no projeto:
+
+Primário: #5E2B97
+
+Violeta Claro: #A884F3
+
+Lilás Névoa: #E9D8FD
+
+Roxo Crepuscular: #3C1A63
+
+Dourado Suave: #EACB76
+
+Neutros: #2A2A2A, #FFFFFF
+
+Logo personalizado feito com elementos circulares em gradiente violeta.
+
+📱 PWA — Aplicativo Instalável
+
+Este projeto suporta PWA e pode ser instalado no celular ou desktop.
+
+Implementações:
+
+manifest.json configurado com nome, short name, descrição, cores e ícones
+
+Ícones 192x192 e 512x512 otimizados
+
+Suporte "Add to Home Screen" (A2HS)
+
+Favicon atualizado
+
+Build no Vite configurado para servir corretamente os assets
+
+☁️ Deploy e Hospedagem — Firebase Hosting
+
+O deploy é feito via Firebase:
+
+firebase deploy
+
+
+O projeto utiliza:
+
+Firebase Hosting
+
+HTTPS automático
+
+Suporte a SPA (Single Page Application)
+
+Redirecionamentos configurados
+
+🧱 Tecnologias utilizadas
+Front-end
+
+React 18
+
+Vite
+
+TypeScript
+
+React Router DOM
+
+CSS Modules
+
+Paleta customizada
+
+Integrações
+
+EmailJS (envio de intenções sem backend)
+
+Firebase Hosting
+
+PWA
+
+Manifest
+
+Custom icons
+
+Instalação nativa no dispositivo
+
+📂 Estrutura do projeto
+src/
+ ├── assets/
+ ├── components/
+ │     ├── Banner/
+ │     ├── Content/
+ │     ├── DailyPrayer/
+ │     ├── Forms/
+ │     ├── Header/
+ │     ├── Location/
+ │     ├── ScrollToTop/
+ │     └── Footer/
+ ├── pages/
+ │     ├── Home/
+ │     ├── About/
+ │     └── Gallery/
+ ├── App.tsx
+ └── main.tsx
+
+public/
+ ├── manifest.json
+ ├── logo-192.png
+ └── logo-512.png
+
+⚙️ Como rodar o projeto localmente
+# instalar dependências
+npm install
+
+# rodar em ambiente de desenvolvimento
+npm run dev
+
+# gerar build
+npm run build
+
+🚀 Deploy no Firebase
+firebase login
+firebase init
+firebase deploy
+
+💛 Licença
+
+Este projeto foi desenvolvido para fins espirituais e comunitários.
+Sinta-se livre para adaptar, evoluir ou contribuir.
